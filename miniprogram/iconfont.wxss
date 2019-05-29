@@ -16,10 +16,11 @@
 }
 
 .icon-remenicon:before {
-  font-size: 20px;
+  font-size: 18px;
   content: "\e64a";
 }
 
 .icon-wode:before {
+  font-size: 18px;
   content: "\e63a";
 }
