@@ -6,7 +6,7 @@
     <view class='movie-comment'>xx给你推荐了一部电影</view>
   </view>
   <view class='skip-buttons'>
-    <view class='btn btn-left'>热门</view>
-    <view class='btn btn-right'>我的</view> 
+    <view class='btn iconfont icon-remenicon'>热门</view>
+    <view class='btn iconfont icon-wode'>我的</view> 
   </view>
 </view>
