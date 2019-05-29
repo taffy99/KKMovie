@@ -6,7 +6,7 @@
     <view class='movie-comment'></view>
   </view>
   <view class='skip-buttons'>
-    <button class='button-left'>热门</button>
-    <button class='button-right'>我的</button> 
+    <view class='btn btn-left'>热门</view>
+    <view class='btn btn-right'>我的</view> 
   </view>
 </view>

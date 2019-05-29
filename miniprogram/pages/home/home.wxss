@@ -1,1 +1,21 @@
 /* miniprogram/pages/home/home.wxss */
+.home-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.skip-buttons{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background: #F6F6F6;
+}
+.skip-buttons .btn{
+  flex: 1;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
