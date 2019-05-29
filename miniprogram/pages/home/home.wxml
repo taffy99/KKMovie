@@ -1,9 +1,9 @@
 <!--miniprogram/pages/home/home.wxml-->
 <view class='home-container'>
   <view class='movie-detail'>
-    <image class='movie-img'></image>
-    <view class='movie-title'></view>
-    <view class='movie-comment'></view>
+    <image class='movie-img' src="{{movieImg}}"></image>
+    <view class='movie-title'>{{movieTitle}}</view>
+    <view class='movie-comment'>xx给你推荐了一部电影</view>
   </view>
   <view class='skip-buttons'>
     <view class='btn btn-left'>热门</view>

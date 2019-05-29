@@ -4,22 +4,34 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {
-
-  },
+  data: { 
+    recommendMovie:{}, // 推荐电影
+    movieTitle:'',
+    movieImg:''  
+    },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.cloud.callFunction({
+      name: 'movieList',
+      complete: res => {
+        let recommendMovie = JSON.parse(JSON.stringify(res.result.data[0]));
+        this.setData({
+          recommendMovie,
+          movieTitle: recommendMovie.title,
+          movieImg: recommendMovie.image
+        })
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+     
   },
 
   /**
