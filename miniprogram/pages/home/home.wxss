@@ -12,9 +12,14 @@
 }
 .movie-img{
   padding:15rpx;
+  height: 750rpx;
 }
 .movie-title, .movie-comment{
   margin-top:15rpx;
+}
+.movie-comment{
+  font-size: 30rpx;
+  color: #333333;
 }
 .skip-buttons{
   position: fixed;
