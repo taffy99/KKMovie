@@ -1,0 +1,12 @@
+<!--miniprogram/pages/home/home.wxml-->
+<view class='home-container'>
+  <view class='movie-detail'>
+    <image class='movie-img'></image>
+    <view class='movie-title'></view>
+    <view class='movie-comment'></view>
+  </view>
+  <view class='skip-buttons'>
+    <button class='button-left'>热门</button>
+    <button class='button-right'>我的</button> 
+  </view>
+</view>
