@@ -1,0 +1,8 @@
+<!--miniprogram/pages/movieDetail/movieDetail.wxml-->
+<view class='movie-container'>
+  <image class='movie-img' src='{{movie.image}}' mode="widthFix"></image>
+  <view class='movie-detail'>
+    <view class='movie-title'>{{movie.title}}</view>
+    <view class='movie-des'>{{movie.description}}</view>
+  </view>
+</view>

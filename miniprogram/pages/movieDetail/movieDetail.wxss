@@ -1,0 +1,11 @@
+/* miniprogram/pages/movieDetail/movieDetail.wxss */
+.movie-container{
+  padding:30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.movie-img{
+  width: 300rpx;
+}

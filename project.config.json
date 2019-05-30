@@ -31,7 +31,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -50,6 +50,13 @@
 					"id": -1,
 					"name": "热门",
 					"pathName": "pages/hotMovie/hotMovie",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "电影详情",
+					"pathName": "pages/movieDetail/movieDetail",
 					"scene": null
 				}
 			]

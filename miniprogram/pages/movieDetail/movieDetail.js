@@ -1,56 +1,40 @@
-// miniprogram/pages/home/home.js
+// miniprogram/pages/movieDetail/movieDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: { 
-    recommendMovie:{}, // 推荐电影
-    movieTitle:'',
-    movieImg:''  
-    },
-    
-  // 跳转热门电影
-  skipToHot(){
-    wx.navigateTo({
-      url: '../hotMovie/hotMovie',
-    })
+  data: {
+    movie:{}
   },
-  // 跳转我的电影
-  skipToMy() {
-    wx.navigateTo({
-      url: '../myMovie/myMovie',
-    })
-  },
-  // 跳转影评详情
-  skipToComment() {
-    wx.navigateTo({
-      url: '../commentDetail/commentDetail',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getMovieById(options.movieId)
+  },
+  
+  // 根据ID获取电影详情
+  getMovieById(id){
     wx.cloud.callFunction({
-      name: 'movieList',
-      success: res => {
-        let recommendMovie = JSON.parse(JSON.stringify(res.result.data[0]));
-        this.setData({
-          recommendMovie,
-          movieTitle: recommendMovie.title,
-          movieImg: recommendMovie.image
-        })
-      },
-      fail:console.error
-    })
+      name:'getMovieById',
+      data:{
+        id:id
+      }
+    }).then(res=>{
+      let movie = res.result.data[0]
+      this.setData({
+        movie
+      })
+    }).catch(console.error)
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-     
+
   },
 
   /**
