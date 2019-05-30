@@ -1,26 +1,18 @@
-// miniprogram/pages/hotMovie/hotMovie.js
+// miniprogram/pages/commentDetail/commentDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    movieList:[]
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.cloud.callFunction({
-      name: 'movieList',
-      complete: res => {
-        let movieList = JSON.parse(JSON.stringify(res.result.data));
-        this.setData({
-          movieList
-        })
-      }
-    })
+
   },
 
   /**

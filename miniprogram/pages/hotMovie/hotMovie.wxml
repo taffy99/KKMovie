@@ -1,2 +1,12 @@
 <!--miniprogram/pages/hotMovie/hotMovie.wxml-->
-<text>miniprogram/pages/hotMovie/hotMovie.wxml</text>
+<view class='hotMv-container'>
+  <view wx:for="{{movieList}}" class='hotMv-item'>
+    <view class='item-left'>
+      <image class='item-img' src="{{item.image}}" mode="widthFix"></image>
+    </view>
+    <view class='item-right'>
+      <view class='item-title'>{{item.title}}</view>
+      <view class='item-category'>类型: {{item.category}}</view>
+    </view>
+  </view>
+</view>

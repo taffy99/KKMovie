@@ -9,7 +9,25 @@ Page({
     movieTitle:'',
     movieImg:''  
     },
-
+    
+  // 跳转热门电影
+  skipToHot(){
+    wx.navigateTo({
+      url: '../hotMovie/hotMovie',
+    })
+  },
+  // 跳转我的电影
+  skipToMy() {
+    wx.navigateTo({
+      url: '../myMovie/myMovie',
+    })
+  },
+  // 跳转影评详情
+  skipToComment() {
+    wx.navigateTo({
+      url: '../commentDetail/commentDetail',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

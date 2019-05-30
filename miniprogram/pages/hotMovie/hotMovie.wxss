@@ -1,1 +1,19 @@
 /* miniprogram/pages/hotMovie/hotMovie.wxss */
+.hotMv-container{
+  padding:40rpx;
+}
+.hotMv-item{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30rpx;
+}
+.item-img{
+  width:200rpx;
+}
+.item-right{
+  margin:auto 35rpx;
+}
+.item-category{
+  margin-top:35rpx;
+  font-size: 30rpx;
+}
