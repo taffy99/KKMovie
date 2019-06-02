@@ -1,0 +1,29 @@
+/* miniprogram/pages/commentList/commentList.wxss */
+.list-container{
+   background-color: #F7F9FB;
+   padding-top:30rpx;
+   height: 100vh;
+}
+.comment-item{
+  padding:50rpx 80rpx;
+  background-color: #ffff;
+  border-bottom: 1px solid #F1F1F1;
+}
+.item-top{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 50rpx;
+}
+.item-header{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.item-content{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+}

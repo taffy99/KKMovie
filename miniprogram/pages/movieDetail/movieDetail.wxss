@@ -12,18 +12,19 @@
   width: 300rpx;
   position: absolute;
   z-index: 9;
-  top:30rpx;
+  top:25rpx;
   
 }
 .movie-detail{
   display: flex;
   position: relative;
-  top:150rpx;
+  top:170rpx;
   flex-direction: column;
   align-items: center;
   padding:50rpx;  
   border: 1px solid #E2E7ED;
   background: #ffffff;
+  margin-bottom: 40rpx;
 }
 .movie-title{
   margin-top:300rpx;

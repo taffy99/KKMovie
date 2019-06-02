@@ -5,9 +5,14 @@
     <view class='movie-title'>{{movie.title}}</view>
     <view class='movie-des'>{{movie.description}}</view>
     <view class='skip-buttons'>
-      <view class='btn iconfont icon-chakan' bindtap='skipToHot'>查看影评</view>
-      <view class='btn iconfont icon-iconset0130' bindtap='skipToMy'>添加影评</view>
+      <view class='btn iconfont icon-chakan' bindtap='skipToComment'>查看影评</view>
+      <view class='btn iconfont icon-iconset0130' bindtap='actionSheetTap'>添加影评</view>
     </view>
   </view>
-
+  <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+    <block wx:for-items="{{actionSheetItems}}">
+        <action-sheet-item  bindtap="bind{{item}}">{{item}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel >取消</action-sheet-cancel>
+</action-sheet>
 </view>
