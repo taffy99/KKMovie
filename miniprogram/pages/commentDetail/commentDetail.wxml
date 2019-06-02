@@ -1,2 +1,12 @@
 <!--miniprogram/pages/commentDetail/commentDetail.wxml-->
-<text>miniprogram/pages/commentDetail/commentDetail.wxml</text>
+<view class='movie-container'>
+  <image class='movie-img' src='{{movie.image}}' mode="widthFix"></image>
+  <view class='movie-detail'>
+    <view class='movie-title'>{{movie.title}}</view>
+    <view class='movie-des'>{{movie.description}}</view>
+    <view class='skip-buttons'>
+      <view class='btn iconfont icon-chakan' bindtap='skipToComment'>收藏影评</view>
+      <view class='btn iconfont icon-iconset0130' bindtap='skipToComment'>写影评</view>
+    </view>
+  </view>
+</view>

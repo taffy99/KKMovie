@@ -1,14 +1,19 @@
 <!--miniprogram/pages/commentList/commentList.wxml-->
 <view class='list-container'>
   <view wx:for='{{commentlist}}' wx:key='{{item._id}}'>
-    <view class='comment-item'>
-      <view class='item-top'>
-        <image class='item-header' src='{{item.headshort}}'></image>
-        <view>{{item.name}}</view>
+    <navigator url='../commentDetail/commentDetail'>
+      <view class='comment-item'>
+        <view class='item-top'>
+          <image class='item-header' src='{{item.headshort}}'></image>
+          <view>{{item.name}}</view>
+        </view>
+        <view class='item-bottom'>
+          <view class='item-content'>{{item.content}}</view>
+        </view>
       </view>
-      <view class='item-bottom'>
-        <view class='item-content'>{{item.content}}</view>
-      </view>
-    </view>
+    </navigator>
+  </view>
+  <view class='skip-buttons'>
+    <view class='btn' bindtap='skipToHome'>回到首页</view>
   </view>
 </view>
