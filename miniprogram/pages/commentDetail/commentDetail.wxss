@@ -1,5 +1,5 @@
 /* miniprogram/pages/commentDetail/commentDetail.wxss */
-.movie-container{
+.comment-container{
   padding:30rpx;
   display: flex;
   flex-direction: column;
@@ -8,14 +8,14 @@
   background-color: #F7F9FB;
   position: relative;
 }
-.movie-img{
+.comment-img{
   width: 300rpx;
   position: absolute;
   z-index: 9;
   top:25rpx;
   
 }
-.movie-detail{
+.comment-detail{
   display: flex;
   position: relative;
   top:170rpx;
@@ -26,10 +26,10 @@
   background: #ffffff;
   margin-bottom: 40rpx;
 }
-.movie-title{
+.comment-title{
   margin-top:300rpx;
 }
-.movie-des{
+.comment-des{
   margin-top: 20rpx;
   font-size:36rpx;
 }
