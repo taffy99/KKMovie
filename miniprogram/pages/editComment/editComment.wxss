@@ -1,0 +1,54 @@
+/* miniprogram/pages/editComment/editComment.wxss */
+.comment-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F7F9FB;
+  position: relative;
+  padding-top:30rpx;
+  height: 100vh;
+}
+.comment-img{
+  width: 300rpx;
+  position: absolute;
+  z-index: 9;
+  top:25rpx;
+  
+}
+.comment-detail{
+  display: flex;
+  position: relative;
+  top:100rpx;
+  flex-direction: column;
+  align-items: center;
+  padding:50rpx;  
+  border: 1px solid #E2E7ED;
+  background: #ffffff;
+  margin-bottom: 40rpx;
+}
+.comment-title{
+  margin-top:300rpx;
+}
+.comment-content{
+  margin-top: 30rpx;
+  text-align: center;
+}
+.input-area{
+  width: 600rpx;
+  font-size:34rpx;
+}
+.skip-buttons{
+  position: fixed;
+  bottom: 0; 
+  width: 100%;
+  display: flex;
+  background: #ffff;
+  border-top: 1px solid #F1F1F1;
+}
+.skip-buttons .btn{
+  flex: 1;
+  text-align: center;
+  height: 100rpx;
+  color:#7F99AF;
+  line-height: 100rpx;
+}

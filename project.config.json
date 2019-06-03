@@ -31,7 +31,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -71,6 +71,13 @@
 					"id": -1,
 					"name": "影评详情",
 					"pathName": "pages/commentDetail/commentDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "编辑影评",
+					"pathName": "pages/editComment/editComment",
 					"scene": null
 				}
 			]
