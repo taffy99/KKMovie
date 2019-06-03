@@ -28,6 +28,12 @@ Page({
       url: '../commentDetail/commentDetail',
     })
   },
+  //跳转电影详情
+  skipToDetail(){
+    wx.navigateTo({
+      url: '../movieDetail/movieDetail',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

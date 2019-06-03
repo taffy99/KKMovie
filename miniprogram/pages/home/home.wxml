@@ -1,7 +1,7 @@
 <!--miniprogram/pages/home/home.wxml-->
 <view class='home-container'>
   <view class='movie-detail'> 
-    <image class='movie-img' src="{{movieImg}}" mode="aspectFit"></image>
+    <image class='movie-img' src="{{movieImg}}" mode="aspectFit" bindtap='skipToDetail'></image>
     <view class='movie-title'>{{movieTitle}}</view>
     <view class='movie-comment' bindtap='skipToComment'>
       <image class="head-shot" src='../../images/wxy.jpg' mode="aspectFill"></image>
