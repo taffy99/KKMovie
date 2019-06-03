@@ -18,7 +18,7 @@
 .comment-detail{
   display: flex;
   position: relative;
-  top:170rpx;
+  top:100rpx;
   flex-direction: column;
   align-items: center;
   padding:50rpx;  
@@ -50,4 +50,28 @@
 }
 .skip-buttons .btn:first-child{
   margin-right: 20rpx;
+}
+.comment-top{
+  margin-top:40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.comment-bottom{
+  margin-top: 20rpx;
+  display: flex;
+}
+.content-txt{
+  margin-left: 20rpx;
+}
+.head-short{
+  width: 85rpx;
+  height: 85rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.comment-name{
+  font-size: 30rpx;
 }

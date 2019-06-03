@@ -3,10 +3,25 @@
   <image class='comment-img' src='{{comment.image}}' mode="widthFix"></image>
   <view class='comment-detail'>
     <view class='comment-title'>{{comment.title}}</view>
-    <view class='comment-des'>{{comment.description}}</view>
+    <view class='comment-content'>
+      <view class='comment-top'>
+          <image class='head-short' src='{{comment.headshort}}'></image>
+          <view class='comment-name'>{{comment.name}}的影评</view>
+      </view>
+      <view class='comment-bottom'>
+        <view class='iconfont icon-baojiaquotation2'></view>
+        <view class='content-txt'>{{comment.content}}</view>
+      </view>
+    </view>
     <view class='skip-buttons'>
-      <view class='btn iconfont icon-chakan' bindtap='skipToComment'>收藏影评</view>
-      <view class='btn iconfont icon-iconset0130' bindtap='skipToComment'>写影评</view>
+      <view class='btn iconfont icon-shoucang1' bindtap='skipToComment'>收藏影评</view>
+      <view class='btn iconfont icon-xieyingping' bindtap='actionSheetTap'>写影评</view>
     </view>
   </view>
+  <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+    <block wx:for-items="{{actionSheetItems}}">
+      <action-sheet-item bindtap="bind{{item}}">{{item}}</action-sheet-item>
+    </block>
+    <action-sheet-cancel>取消</action-sheet-cancel>
+  </action-sheet>
 </view>
