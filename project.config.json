@@ -31,7 +31,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -85,6 +85,13 @@
 					"id": -1,
 					"name": "影评预览",
 					"pathName": "pages/previewComment/previewComment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/myFavorites/myFavorities",
 					"query": "",
 					"scene": null
 				}

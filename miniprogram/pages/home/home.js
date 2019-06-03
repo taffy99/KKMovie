@@ -19,7 +19,7 @@ Page({
   // 跳转我的电影
   skipToMy() {
     wx.navigateTo({
-      url: '../myMovie/myMovie',
+      url: '../myFavorites/myFavorities',
     })
   },
   // 跳转影评详情

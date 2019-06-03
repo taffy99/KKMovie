@@ -1,0 +1,21 @@
+<!--miniprogram/pages/myFavorites/myFavorities.wxml-->
+<view class='my-container'>
+  <view wx:for="{{movieList}}" wx:key="{{item._id}}">
+      <view class='my-item'>
+        <view class='item-left'>
+          <image class='item-img' src="{{item.image}}" mode="widthFix"></image>
+        </view>
+        <view class='item-right'>
+          <view class='item-title'>{{item.title}}</view>
+          <view class='item-comment'>{{item.content}}</view>
+          <view class='item-person'>
+            <image class='head-short' src='{{item.headshort}}'></image>
+            <view>{{item.name}}</view>
+          </view>
+        </view>
+      </view>
+  </view>
+  <view class='skip-buttons'>
+    <view class='btn' bindtap='skipToHome'>回到首页</view>
+  </view>
+</view>
