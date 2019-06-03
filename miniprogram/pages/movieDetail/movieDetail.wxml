@@ -11,7 +11,7 @@
   </view>
   <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
     <block wx:for-items="{{actionSheetItems}}">
-      <action-sheet-item bindtap="bind{{item}}">{{item}}</action-sheet-item>
+      <action-sheet-item bindtap="bind">{{item}}</action-sheet-item>
     </block>
     <action-sheet-cancel>取消</action-sheet-cancel>
   </action-sheet>

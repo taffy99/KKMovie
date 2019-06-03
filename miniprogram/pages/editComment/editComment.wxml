@@ -8,6 +8,6 @@
     </view>
   </view>
   <view class='skip-buttons'>
-    <view class='btn' bindtap='skipToHome'>完成</view>
+    <view class='btn' bindtap='skipToPreview'>完成</view>
   </view>
 </view>

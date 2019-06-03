@@ -20,6 +20,11 @@ Page({
       actionSheetHidden: !this.data.actionSheetHidden
     })
   },
+  bind(){
+    wx.navigateTo({
+      url: '../editComment/editComment',
+    })
+  },
   // 跳转影评列表页
   skipToComment(){
     wx.navigateTo({

@@ -1,11 +1,14 @@
 /* miniprogram/pages/hotMovie/hotMovie.wxss */
 .hotMv-container{
   padding:40rpx;
+   background-color: #f7f9fb;
+
 }
 .hotMv-item{
   display: flex;
   flex-direction: row;
   margin-bottom: 30rpx;
+  background: #fff;
 }
 .item-img{
   width:200rpx;

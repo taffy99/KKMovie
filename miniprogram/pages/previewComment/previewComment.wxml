@@ -14,8 +14,8 @@
       </view>
     </view>
     <view class='skip-buttons'>
-      <view class='btn iconfont icon-chexiao' bindtap='skipToComment'>重新编辑</view>
-      <view class='btn iconfont icon-fabu' bindtap='actionSheetTap'>发布影评</view>
+      <view class='btn iconfont icon-chexiao' bindtap='backToComment'>重新编辑</view>
+      <view class='btn iconfont icon-fabu' bindtap='saveToComment'>发布影评</view>
     </view>
   </view>
 </view>

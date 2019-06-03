@@ -12,7 +12,14 @@ Page({
       content: '我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评'
     },
   },
-
+  backToComment(){
+    wx.navigateBack()
+  },
+  saveToComment(){
+    wx.navigateTo({
+      url: '../commentList/commentList',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

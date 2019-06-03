@@ -26,6 +26,11 @@ Page({
       actionSheetHidden: !this.data.actionSheetHidden
     })
   },
+  bind(){
+    wx.navigateTo({
+      url: '../editComment/editComment',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

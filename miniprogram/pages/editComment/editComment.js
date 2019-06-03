@@ -13,7 +13,11 @@ Page({
       content: '我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评'
     }
   },
-
+  skipToPreview(){
+    wx.navigateTo({
+      url: '../previewComment/previewComment',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
