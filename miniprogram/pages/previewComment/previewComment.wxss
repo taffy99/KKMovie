@@ -3,10 +3,10 @@
   padding:30rpx;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: #F7F9FB;
   position: relative;
+  height: 100vh;
 }
 .comment-img{
   width: 300rpx;

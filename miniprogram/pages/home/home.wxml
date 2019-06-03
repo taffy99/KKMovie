@@ -9,7 +9,7 @@
     </view>
   </view>
   <view class='skip-buttons'>
-    <view class='btn iconfont icon-remenicon' bindtap='skipToHot'>热门</view>
+    <view class='btn iconfont' bindtap='skipToHot'>热门</view>
     <view class='btn iconfont icon-wode' bindtap='skipToMy'>我的</view> 
   </view>
 </view>
