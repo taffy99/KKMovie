@@ -5,15 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    commentlist:[{
-      headshort:'../../images/juide.jpg',
-      name:'小变态',
-      content:'我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评'
-    },{
-        headshort: '../../images/wxy.jpg',
-        name: '五选一',
-        content: '我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评'
-      }]
+    commentlist:[]
   },
   skipToHome(){
     wx.redirectTo({
@@ -24,9 +16,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getCommentList()
   },
-
+  getCommentList(){
+    wx.cloud.callFunction({
+      name:'movieComments'
+    }).then(res=>{
+      this.setData({
+        commentlist:res.result.data
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

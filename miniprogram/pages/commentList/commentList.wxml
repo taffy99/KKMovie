@@ -1,7 +1,7 @@
 <!--miniprogram/pages/commentList/commentList.wxml-->
 <view class='list-container'>
   <view wx:for='{{commentlist}}' wx:key='{{item._id}}'>
-    <navigator url='../commentDetail/commentDetail'>
+    <navigator url='../commentDetail/commentDetail?commentId={{item._id}}'>
       <view class='comment-item'>
         <view class='item-top'>
           <image class='item-header' src='{{item.headshort}}'></image>
