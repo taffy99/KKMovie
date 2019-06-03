@@ -1,0 +1,21 @@
+<!--miniprogram/pages/previewComment/previewComment.wxml-->
+<view class='comment-container'>
+  <image class='comment-img' src='{{comment.image}}' mode="widthFix"></image>
+  <view class='comment-detail'>
+    <view class='comment-title'>{{comment.title}}</view>
+    <view class='comment-content'>
+      <view class='comment-top'>
+          <image class='head-short' src='{{comment.headshort}}'></image>
+          <view class='comment-name'>{{comment.name}}的影评</view>
+      </view>
+      <view class='comment-bottom'>
+        <view class='iconfont icon-baojiaquotation2'></view>
+        <view class='content-txt'>{{comment.content}}</view>
+      </view>
+    </view>
+    <view class='skip-buttons'>
+      <view class='btn iconfont icon-chexiao' bindtap='skipToComment'>重新编辑</view>
+      <view class='btn iconfont icon-fabu' bindtap='actionSheetTap'>发布影评</view>
+    </view>
+  </view>
+</view>

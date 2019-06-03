@@ -1,0 +1,77 @@
+/* miniprogram/pages/previewComment/previewComment.wxss */
+.comment-container{
+  padding:30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F7F9FB;
+  position: relative;
+}
+.comment-img{
+  width: 300rpx;
+  position: absolute;
+  z-index: 9;
+  top:25rpx;
+  
+}
+.comment-detail{
+  display: flex;
+  position: relative;
+  top:100rpx;
+  flex-direction: column;
+  align-items: center;
+  padding:50rpx;  
+  border: 1px solid #E2E7ED;
+  background: #ffffff;
+  margin-bottom: 40rpx;
+}
+.comment-title{
+  margin-top:300rpx;
+}
+.comment-des{
+  margin-top: 20rpx;
+  font-size:36rpx;
+}
+.skip-buttons{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top:100rpx;
+}
+.skip-buttons .btn{
+  flex: 1;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  border: 1px solid #7F99AF;
+  color: #7F99AF;
+  border-radius: 10rpx;
+}
+.skip-buttons .btn:first-child{
+  margin-right: 20rpx;
+}
+.comment-top{
+  margin-top:40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.comment-bottom{
+  margin-top: 20rpx;
+  display: flex;
+}
+.content-txt{
+  margin-left: 20rpx;
+}
+.head-short{
+  width: 85rpx;
+  height: 85rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.comment-name{
+  font-size: 30rpx;
+}
