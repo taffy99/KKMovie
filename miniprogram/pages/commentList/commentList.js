@@ -18,13 +18,14 @@ Page({
   onLoad: function (options) {
     this.getCommentList()
   },
-  getCommentList(){
+  getCommentList(callback){
     wx.cloud.callFunction({
       name:'movieComments'
     }).then(res=>{
       this.setData({
         commentlist:res.result.data
       })
+      callback && callback()
     })
   },
   /**
@@ -38,13 +39,8 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+    this.getCommentList(res=>{
+      wx.stopPullDownRefresh()
+    })
   }
 })
