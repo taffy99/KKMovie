@@ -10,7 +10,7 @@ Page({
       title: '复仇者联盟3：无限战争',
       headshort: '../../images/juide.jpg',
       name: '小变态',
-      content: '我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评我是文字影评'
+      content: ''
     }
   },
   skipToPreview(){
@@ -22,6 +22,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options.query)
 
   },
   /**

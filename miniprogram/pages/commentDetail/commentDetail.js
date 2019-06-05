@@ -22,7 +22,7 @@ Page({
   },
   bind(){
     wx.navigateTo({
-      url: '../editComment/editComment',
+      url: '../editComment/editComment?comment='+this.data.comment,
     })
   },
   /**

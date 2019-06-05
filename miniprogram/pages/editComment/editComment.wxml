@@ -4,7 +4,7 @@
   <view class='comment-detail'>
     <view class='comment-title'>{{comment.title}}</view>
     <view class='comment-content'>
-      <textarea placeholder='输入你的影评内容...' class='input-area'></textarea>
+      <textarea placeholder='输入你的影评内容...' class='input-area' value='{{content}}'></textarea>
     </view>
   </view>
   <view class='skip-buttons'>
