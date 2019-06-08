@@ -11,7 +11,8 @@ Page({
       headshort: '../../images/juide.jpg',
       name: '小变态',
       content: ''
-    }
+    },
+    inputValue:''
   },
   skipToPreview(){
     wx.navigateTo({
@@ -22,8 +23,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.query)
-
+  
+  },
+  onblur(e){
+    this.setData({
+      inputValue: e.detail.value
+    })
   },
   /**
    * 页面相关事件处理函数--监听用户下拉动作
