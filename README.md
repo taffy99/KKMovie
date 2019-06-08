@@ -10,3 +10,7 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+## 云开发数据
+
+— 存放路径：database 文件夹下，打开小程序云开发—数据库导入即可
+
