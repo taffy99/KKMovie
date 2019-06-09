@@ -13,6 +13,9 @@ Page({
    */
   onLoad: function (options) {
       this.getMovieList()
+      wx.showLoading({
+        title: '',
+      })
   },
   getMovieList(callback){
     wx.cloud.callFunction({
@@ -22,9 +25,11 @@ Page({
         this.setData({
           movieList
         })
+        wx.hideLoading()
       },
       complete:res =>{
         callback&&callback()
+        wx.hideLoading()
       }
     })
   },

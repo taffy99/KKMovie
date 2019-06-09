@@ -30,8 +30,9 @@ Page({
   },
   //跳转电影详情
   skipToDetail(){
+    let movieId = this.data.recommendMovie._id
     wx.navigateTo({
-      url: '../movieDetail/movieDetail',
+      url: '../movieDetail/movieDetail?movieId=' + movieId,
     })
   },
   /**
@@ -41,17 +42,21 @@ Page({
     wx.cloud.callFunction({
       name: 'movieList',
       success: res => {
-        let recommendMovie = JSON.parse(JSON.stringify(res.result.data[0]));
+        let recommendMovie = this.getRandomMovie(res.result.data);
         this.setData({
           recommendMovie,
           movieTitle: recommendMovie.title,
           movieImg: recommendMovie.image
         })
       },
-      fail:console.error
+      fail:console.errorerror
     })
   },
-
+  //获取随机电影
+  getRandomMovie(movieList){
+    let movie = movieList[Math.floor(Math.random()* movieList.length)]
+    return movie
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

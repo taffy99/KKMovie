@@ -30,6 +30,9 @@ Page({
    */
   onLoad: function (options) {
     this.getComment(options.commentId)
+    wx.showLoading({
+      title: '',
+    })
   },
   getComment(id){
     wx.cloud.callFunction({
@@ -41,6 +44,10 @@ Page({
      this.setData({
        comment:res.result.data[0]
      })
+     wx.hideLoading()
+    }).catch(error=>{
+      console.log(error)
+      wx.hideLoading()
     })
   },
   /**
