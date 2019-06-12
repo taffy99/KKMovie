@@ -13,7 +13,6 @@
   position: absolute;
   z-index: 9;
   top:25rpx;
-  
 }
 .comment-detail{
   display: flex;
