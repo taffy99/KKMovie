@@ -33,7 +33,7 @@
   margin-right: 10rpx;
 }
 .comment-tip{
-  font-size: 30rpx;
+  font-size: 35rpx;
   color: #333333;
 }
 .skip-buttons{
