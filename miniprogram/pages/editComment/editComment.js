@@ -11,9 +11,20 @@ Page({
       headshort: '../../images/juide.jpg',
       name: '小变态',
       content: ''
-    }
+    },
+    content:'',
+    focus:'true'
+  },
+  bindTextBlur(e){
+    this.setData({
+      content:e.detail.value
+    })
   },
   skipToPreview(){
+    this.setData({
+      focus:'false'
+    })
+    console.log(this.data.content)
     wx.navigateTo({
       url: '../previewComment/previewComment',
     })
