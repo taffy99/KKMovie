@@ -9,13 +9,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  top:50rpx;
 }
 .movie-img{
-  padding:15rpx;
+  width: 450rpx;
   height: 750rpx;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1)
 }
 .movie-title, .movie-comment{
-  margin-top:15rpx;
+  margin-top:20rpx;
 }
 .movie-comment{
   display: flex;

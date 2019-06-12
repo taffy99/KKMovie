@@ -35,6 +35,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title: '',
+    })
     this.getMovieById(options.movieId)
   },
   
@@ -50,6 +53,7 @@ Page({
       this.setData({
         movie
       })
+      wx.hideLoading()
     }).catch(console.error)
   },
   /**

@@ -12,19 +12,9 @@ Page({
       name: '小变态',
       content: ''
     },
-    content:'',
-    focus:'true'
-  },
-  bindTextBlur(e){
-    this.setData({
-      content:e.detail.value
-    })
+    inputValue:''
   },
   skipToPreview(){
-    this.setData({
-      focus:'false'
-    })
-    console.log(this.data.content)
     wx.navigateTo({
       url: '../previewComment/previewComment',
     })
@@ -33,8 +23,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.query)
-
+  
+  },
+  onblur(e){
+    this.setData({
+      inputValue: e.detail.value
+    })
   },
   /**
    * 页面相关事件处理函数--监听用户下拉动作
