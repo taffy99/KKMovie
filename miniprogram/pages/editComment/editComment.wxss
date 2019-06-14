@@ -52,3 +52,14 @@
   color:#7F99AF;
   line-height: 100rpx;
 }
+.recordingBtn {
+  padding:15rpx 45rpx 15rpx 40rpx;
+  border:1px solid #7F99AF;
+  border-radius: 8rpx;
+  color:#7F99AF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50rpx;
+  line-height: 50rpx;
+}

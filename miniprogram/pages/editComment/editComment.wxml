@@ -6,7 +6,9 @@
     <view class='comment-content'>
       <textarea placeholder='输入你的影评内容...' class='input-area' value='{{inputValue}}' bindblur='onblur'></textarea>
     </view>
-    <view class='iconfont icon-luyin'></view>
+    <view class='recordingBtn'>
+        <view class='iconfont icon-luyin'>录音</view>
+    </view>
   </view>
   <view class='skip-buttons'>
     <view class='btn' bindtap='skipToPreview'>完成</view>

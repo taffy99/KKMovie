@@ -37,7 +37,7 @@
   content: "\e63d";
 }
 .icon-luyin:before {
-  font-size: 18px;
+  font-size: 20px;
   margin-right: 5px;
   content: "\e60f";
 }
