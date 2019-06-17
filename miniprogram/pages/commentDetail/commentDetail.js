@@ -21,8 +21,13 @@ Page({
     })
   },
   bind(){
+    let movieDetail = {
+      image:this.data.comment.image,
+      title:this.data.comment.title
+    }
+    wx.setStorageSync('movieDetail', movieDetail)
     wx.navigateTo({
-      url: '../editComment/editComment?comment='+this.data.comment,
+      url: '../editComment/editComment'
     })
   },
   /**
