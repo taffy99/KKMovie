@@ -17,6 +17,9 @@ Page({
    */
   onLoad: function (options) {
     this.getMyFavorites()
+    wx.showLoading({
+      title: '',
+    })
   },
   getMyFavorites(callback){
     wx.cloud.callFunction({
@@ -25,6 +28,7 @@ Page({
       this.setData({
         movieList:res.result.data
       })
+      wx.hideLoading()
       callback && callback()
     })
   },

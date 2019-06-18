@@ -20,7 +20,6 @@ Page({
         name: this.data.name,
         title: this.data.title,
         headshort: this.data.headshort,
-        name: this.data.name,
         content: this.data.content,
         image:this.data.image
       },

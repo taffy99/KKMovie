@@ -1,4 +1,5 @@
 // miniprogram/pages/commentDetail/commentDetail.js
+const db = wx.cloud.database();
 Page({
 
   /**
@@ -28,6 +29,25 @@ Page({
     wx.setStorageSync('movieDetail', movieDetail)
     wx.navigateTo({
       url: '../editComment/editComment'
+    })
+  },
+  // 收藏影评
+  skipToComment(){
+    db.collection('myFavorite').add({
+      data:{
+        content: this.data.comment.content,
+        headshort: this.data.comment.headshort,
+        title: this.data.comment.title,
+        image: this.data.comment.image,
+        name: this.data.comment.name
+      },
+      success: (res) => {
+        console.log(res)
+      },
+      fail: console.error
+    })
+    wx.navigateTo({
+      url: '../myFavorites/myFavorities',
     })
   },
   /**

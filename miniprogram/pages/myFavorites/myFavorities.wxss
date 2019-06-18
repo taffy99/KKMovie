@@ -4,6 +4,7 @@
   padding: 40rpx;
   background-color: #f7f9fb;
   height: 100vh;
+  padding-bottom: 150rpx;
 }
 
 .my-item {
