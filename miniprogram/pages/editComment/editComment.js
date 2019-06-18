@@ -1,4 +1,6 @@
 // miniprogram/pages/editComment/editComment.js
+const recorderManager = wx.getRecorderManager()
+const innerAudioContext = wx.createInnerAudioContext()
 Page({
 
   /**
@@ -7,41 +9,49 @@ Page({
   data: {
     image: '',
     title: '',
-    inputValue: ''
+    inputValue: '',
+    tempFilePath: ''
   },
   skipToPreview() {
     wx.navigateTo({
-      url: '../previewComment/previewComment',
+      url: '../previewComment/previewComment?content='+this.data.inputValue,
     })
   },
   startRecord() {
-    const recorderManager = wx.getRecorderManager()
-
+    const options = {
+      duration: 10000, // 指定录音的时长，单位 ms
+      sampleRate: 44100, //采样率
+      numberOfChannels: 1,//录音通道数
+      encodeBitRate: 192000,//编码码率
+      format: 'mp3',//音频格式，有效值 aac/mp3
+      frameSize: 50 //指定帧大小，单位 KB
+    }
+    recorderManager.start(options)
     recorderManager.onStart(() => {
       console.log('recorder start')
     })
-    recorderManager.onPause(() => {
-      console.log('recorder pause')
+      // 错误回调
+    recorderManager.onError((res) => {
+      console.log(res);
     })
+  },
+  stopRecord(){
+    recorderManager.stop()
     recorderManager.onStop((res) => {
-      console.log('recorder stop', res)
-      const { tempFilePath } = res
+      this.tempFilePath = res.tempFilePath;
+      console.log('停止录音', res.tempFilePath)
+      // const { tempFilePath } = res
     })
-    recorderManager.onFrameRecorded((res) => {
-      const { frameBuffer } = res
-      console.log('frameBuffer.byteLength', frameBuffer.byteLength)
+  },
+  playRecord(){
+    innerAudioContext.autoplay = true
+    innerAudioContext.src = this.tempFilePath
+    innerAudioContext.onPlay(()=>{
+       console.log('start play')
     })
-
-    const options = {
-      duration: 10000,
-      sampleRate: 44100,
-      numberOfChannels: 1,
-      encodeBitRate: 192000,
-      format: 'aac',
-      frameSize: 50
-    }
-
-    recorderManager.start(options)
+    innerAudioContext.onError((res)=>{
+      console.log(res.errMsg)
+    })
   },
   /**
    * 生命周期函数--监听页面加载
