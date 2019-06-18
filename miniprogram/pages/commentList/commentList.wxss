@@ -3,6 +3,7 @@
    background-color: #F7F9FB;
    padding-top:30rpx;
    height: 100vh;
+   padding-bottom: 150rpx;
 }
 .comment-item{
   padding:50rpx 80rpx;
