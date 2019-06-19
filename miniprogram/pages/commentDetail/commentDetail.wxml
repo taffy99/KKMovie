@@ -14,7 +14,10 @@
       </view>
     </view>
     <view class='skip-buttons'>
-      <view class='btn iconfont icon-shoucang' bindtap='skipToComment'>收藏影评</view>
+      <view class="btn iconfont {{addToFavorite?'icon-shoucang1':'icon-shoucang'}}" bindtap='skipToComment'>
+      <text wx:if="{{addToFavorite}}">已收藏</text>
+      <text wx:else>收藏影评</text>
+      </view>
       <view class='btn iconfont icon-xieyingping' bindtap='actionSheetTap'>写影评</view>
     </view>
   </view>

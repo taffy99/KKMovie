@@ -8,7 +8,8 @@ Page({
   data: {
     comment: {},
     actionSheetHidden: true,
-    actionSheetItems: ['文字', '音频']
+    actionSheetItems: ['文字', '音频'],
+    addToFavorite: false
   },
   // 底部弹出框
   actionSheetTap() {
@@ -33,19 +34,24 @@ Page({
   },
   // 收藏影评
   skipToComment(){
-    db.collection('myFavorite').add({
-      data:{
-        content: this.data.comment.content,
-        headshort: this.data.comment.headshort,
-        title: this.data.comment.title,
-        image: this.data.comment.image,
-        name: this.data.comment.name
-      },
-      success: (res) => {
-        console.log(res)
-      },
-      fail: console.error
-    })
+    if(!this.data.addToFavorite){ // 未收藏
+      this.setData({
+        addToFavorite: true
+      })
+      db.collection('myFavorite').add({
+        data: {
+          content: this.data.comment.content,
+          headshort: this.data.comment.headshort,
+          title: this.data.comment.title,
+          image: this.data.comment.image,
+          name: this.data.comment.name
+        },
+        success: (res) => {
+          console.log(res)
+        },
+        fail: console.error
+      })
+    }
     wx.navigateTo({
       url: '../myFavorites/myFavorities',
     })
