@@ -14,7 +14,7 @@
       </view>
     </view>
     <view class='skip-buttons'>
-      <view class='btn iconfont icon-shoucang1' bindtap='skipToComment'>收藏影评</view>
+      <view class='btn iconfont icon-shoucang' bindtap='skipToComment'>收藏影评</view>
       <view class='btn iconfont icon-xieyingping' bindtap='actionSheetTap'>写影评</view>
     </view>
   </view>

@@ -43,6 +43,7 @@
   flex-direction: row;
   width: 100%;
   background: #F6F6F6;
+  color:#7F99AF
 }
 .skip-buttons .btn{
   flex: 1;
