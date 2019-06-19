@@ -21,6 +21,11 @@ Page({
     })
   },
   bind(){
+    let movieDetail = {
+      image: this.data.movie.image,
+      title: this.data.movie.title
+    }
+    wx.setStorageSync('movieDetail', movieDetail)
     wx.navigateTo({
       url: '../editComment/editComment',
     })
@@ -50,7 +55,7 @@ Page({
       }
     }).then(res=>{
       let movie = res.result.data[0]
-      this.setData({
+      this.setData({ 
         movie
       })
       wx.hideLoading()
