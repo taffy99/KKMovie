@@ -59,7 +59,6 @@
   line-height: 85rpx;
 }
 .radio-time{
-  font-style: italic;
   margin-left:5%;
 }
 .radio-play{
@@ -68,25 +67,6 @@
   box-sizing: border-box;
   overflow: hidden;
   transform: rotate(135deg)
-}
-.wifi-circle{
-  border:5rpx solid #fff;
-  border-radius: 50%;
-  position: absolute;
-}
-.first{
-  width: 5rpx;
-  height: 5rpx;
-  background: #fff;
-  top:45rpx;
-  left:45rpx;
-}
-.second{
-  width: 25rpx;
-  height: 25rpx;
-  background: #fff;
-  top:35rpx;
-  left:35rpx;
 }
 .input-area {
   width: 600rpx;

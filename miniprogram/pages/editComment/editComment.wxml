@@ -11,9 +11,6 @@
         <view class='radio-content'>
           <view class='radio-time'>40''</view>
           <view class='radio-play'>
-            <view class='wifi-circle first'></view>
-            <view class='wifi-circle second'></view>
-            <view class='wifi-circle third'></view>
           </view>
         </view>
       </view>
