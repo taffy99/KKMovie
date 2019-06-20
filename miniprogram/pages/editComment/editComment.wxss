@@ -1,62 +1,73 @@
 /* miniprogram/pages/editComment/editComment.wxss */
-.comment-container{
+
+.comment-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #F7F9FB;
+  background-color: #f7f9fb;
   position: relative;
-  padding-top:30rpx;
+  padding-top: 30rpx;
   height: 100vh;
 }
-.comment-img{
+
+.comment-img {
   width: 300rpx;
   position: absolute;
   z-index: 9;
-  top:25rpx;
-  
+  top: 25rpx;
 }
-.comment-detail{
+
+.comment-detail {
   display: flex;
   position: relative;
-  top:100rpx;
+  top: 100rpx;
   flex-direction: column;
   align-items: center;
-  padding:50rpx;
-  border: 1px solid #E2E7ED;
-  background: #ffffff;
+  padding: 50rpx;
+  border: 1px solid #e2e7ed;
+  background: #fff;
   margin-bottom: 40rpx;
+  width: 80%;
 }
-.comment-title{
-  margin-top:300rpx;
+
+.comment-title {
+  margin-top: 300rpx;
 }
-.comment-content{
+
+.comment-content, .radio-content {
   margin-top: 30rpx;
   text-align: center;
 }
-.input-area{
-  width: 600rpx;
-  font-size:34rpx;
+.record-Radio {
+  height: 250rpx;
 }
-.skip-buttons{
+.input-area {
+  width: 600rpx;
+  font-size: 34rpx;
+}
+
+.skip-buttons {
   position: fixed;
-  bottom: 0; 
+  bottom: 0;
   width: 100%;
   display: flex;
   background: #ffff;
-  border-top: 1px solid #F1F1F1;
+  border-top: 1px solid #f1f1f1;
 }
-.skip-buttons .btn{
+
+.skip-buttons .btn {
   flex: 1;
   text-align: center;
   height: 100rpx;
-  color:#7F99AF;
+  color: #7f99af;
   line-height: 100rpx;
 }
+
 .recordingBtn {
-  padding:15rpx 45rpx 15rpx 40rpx;
-  border:1px solid #7F99AF;
+  padding: 15rpx 45rpx 15rpx 40rpx;
+  border: 1px solid #7f99af;
   border-radius: 8rpx;
-  color:#7F99AF;
+  color: #7f99af;
   display: flex;
   align-items: center;
   justify-content: center;
