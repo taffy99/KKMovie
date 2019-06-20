@@ -24,7 +24,7 @@ Page({
   // 开始录音
   startRecord() {
     const options = {
-      duration: 10000, // 指定录音的时长，单位 ms
+      duration: 60000, // 指定录音的时长，单位 ms
       sampleRate: 44100, //采样率
       numberOfChannels: 1, //录音通道数
       encodeBitRate: 192000, //编码码率
@@ -62,7 +62,6 @@ Page({
     recorderManager.onStop((res) => {
       this.tempFilePath = res.tempFilePath;
       console.log('停止录音', res.tempFilePath);
-      // const { tempFilePath } = res
     })
     clearInterval(timer);
     this.setData({

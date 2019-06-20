@@ -6,8 +6,17 @@
     <view class='comment-content' wx:if='{{selectTxt}}'>
       <textarea placeholder='输入你的影评内容...' class='input-area' value='{{inputValue}}' bindblur='onblur'></textarea>
     </view>
-    <view class='radio-content' wx:else>
-      <view class='record-Radio'></view>
+    <view class='record-content' wx:else>
+      <view class='record-Radio'>
+        <view class='radio-content'>
+          <view class='radio-time'>40''</view>
+          <view class='radio-play'>
+            <view class='wifi-circle first'></view>
+            <view class='wifi-circle second'></view>
+            <view class='wifi-circle third'></view>
+          </view>
+        </view>
+      </view>
       <view class='recordingBtn' bindtap='startRecord' wx:if="{{!startRecord}}">
         <view class='iconfont icon-luyin'>录音</view>
       </view>

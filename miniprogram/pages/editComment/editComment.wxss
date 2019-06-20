@@ -9,14 +9,12 @@
   padding-top: 30rpx;
   height: 100vh;
 }
-
 .comment-img {
   width: 300rpx;
   position: absolute;
   z-index: 9;
   top: 25rpx;
 }
-
 .comment-detail {
   display: flex;
   position: relative;
@@ -34,18 +32,66 @@
   margin-top: 300rpx;
 }
 
-.comment-content, .radio-content {
+.comment-content{
   margin-top: 30rpx;
   text-align: center;
 }
+.record-content{
+  margin-top:40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .record-Radio {
-  height: 250rpx;
+  height: 300rpx;
+}
+.radio-content{
+  position: relative;
+  width: 350rpx;
+  height: 85rpx;
+  background: #7f99af;
+  opacity: 0.8;
+  border-radius: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  line-height: 85rpx;
+}
+.radio-time{
+  font-style: italic;
+  margin-left:5%;
+}
+.radio-play{
+  width: 100rpx;
+  height: 100rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  transform: rotate(135deg)
+}
+.wifi-circle{
+  border:5rpx solid #fff;
+  border-radius: 50%;
+  position: absolute;
+}
+.first{
+  width: 5rpx;
+  height: 5rpx;
+  background: #fff;
+  top:45rpx;
+  left:45rpx;
+}
+.second{
+  width: 25rpx;
+  height: 25rpx;
+  background: #fff;
+  top:35rpx;
+  left:35rpx;
 }
 .input-area {
   width: 600rpx;
   font-size: 34rpx;
 }
-
 .skip-buttons {
   position: fixed;
   bottom: 0;
@@ -58,6 +104,7 @@
 .skip-buttons .btn {
   flex: 1;
   text-align: center;
+  width: 100%;
   height: 100rpx;
   color: #7f99af;
   line-height: 100rpx;
@@ -71,6 +118,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 150rpx;
   height: 50rpx;
   line-height: 50rpx;
 }
