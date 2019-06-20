@@ -22,14 +22,15 @@ Page({
       actionSheetHidden: !this.data.actionSheetHidden
     })
   },
-  bind(){
+  bindItemTap(e){
+    let selectType = e.currentTarget.dataset.name
     let movieDetail = {
       image:this.data.comment.image,
       title:this.data.comment.title
     }
     wx.setStorageSync('movieDetail', movieDetail)
     wx.navigateTo({
-      url: '../editComment/editComment'
+      url: '../editComment/editComment?selectType=' + selectType
     })
   },
   // 收藏影评
@@ -80,12 +81,5 @@ Page({
       console.log(error)
       wx.hideLoading()
     })
-  },
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
   }
-
 })

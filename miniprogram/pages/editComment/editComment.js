@@ -10,11 +10,12 @@ Page({
     image: '',
     title: '',
     inputValue: '',
-    tempFilePath: ''
+    tempFilePath: '',
+    selectTxt: true
   },
   skipToPreview() {
     wx.navigateTo({
-      url: '../previewComment/previewComment?content='+this.data.inputValue,
+      url: '../previewComment/previewComment?content=' + this.data.inputValue,
     })
   },
   startRecord() {
@@ -30,12 +31,12 @@ Page({
     recorderManager.onStart(() => {
       console.log('recorder start')
     })
-      // 错误回调
+    // 错误回调
     recorderManager.onError((res) => {
       console.log(res);
     })
   },
-  stopRecord(){
+  stopRecord() {
     recorderManager.stop()
     recorderManager.onStop((res) => {
       this.tempFilePath = res.tempFilePath;
@@ -43,13 +44,13 @@ Page({
       // const { tempFilePath } = res
     })
   },
-  playRecord(){
+  playRecord() {
     innerAudioContext.autoplay = true
     innerAudioContext.src = this.tempFilePath
-    innerAudioContext.onPlay(()=>{
-       console.log('start play')
+    innerAudioContext.onPlay(() => {
+      console.log('start play')
     })
-    innerAudioContext.onError((res)=>{
+    innerAudioContext.onError((res) => {
       console.log(res.errMsg)
     })
   },
@@ -57,6 +58,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
+    if (options.selectType && options.selectType == '文字') {
+      this.setData({
+        selectTxt: true
+      })
+    } else if (options.selectType && options.selectType == '音频') {
+      this.setData({
+        selectTxt: false
+      })
+    }
     let movieDetail = wx.getStorageSync('movieDetail')
     this.setData({
       image: movieDetail.image,
@@ -67,11 +78,5 @@ Page({
     this.setData({
       inputValue: e.detail.value
     })
-  },
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
   }
 })

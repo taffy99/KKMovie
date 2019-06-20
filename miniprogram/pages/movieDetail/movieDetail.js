@@ -20,14 +20,15 @@ Page({
       actionSheetHidden: !this.data.actionSheetHidden
     })
   },
-  bind(){
+  bindItemTap(e){
+    let selectType = e.currentTarget.dataset.name
     let movieDetail = {
       image: this.data.movie.image,
       title: this.data.movie.title
     }
     wx.setStorageSync('movieDetail', movieDetail)
     wx.navigateTo({
-      url: '../editComment/editComment',
+      url: '../editComment/editComment?selectType=' + selectType
     })
   },
   // 跳转影评列表页

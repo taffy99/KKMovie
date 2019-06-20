@@ -4,9 +4,9 @@
   <view class='comment-detail'>
     <view class='comment-title'>{{title}}</view>
     <view class='comment-content'>
-      <textarea placeholder='输入你的影评内容...' class='input-area' value='{{inputValue}}' bindblur='onblur'></textarea>
+      <textarea placeholder='输入你的影评内容...' class='input-area' value='{{inputValue}}' bindblur='onblur' wx:if='{{selectTxt}}'></textarea>
     </view>
-    <view class='recordingBtn' bindtap='startRecord'>
+    <view class='recordingBtn' bindtap='startRecord' wx:if='{{!selectTxt}}'>
         <view class='iconfont icon-luyin'>录音</view>
     </view>
   </view>

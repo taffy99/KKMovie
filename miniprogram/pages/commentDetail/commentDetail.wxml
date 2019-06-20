@@ -23,7 +23,7 @@
   </view>
   <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
     <block wx:for-items="{{actionSheetItems}}" wx:key="item">
-      <action-sheet-item bindtap="bind">{{item}}</action-sheet-item>
+      <action-sheet-item bindtap="bindItemTap" data-name="{{item}}">{{item}}</action-sheet-item>
     </block>
     <action-sheet-cancel>取消</action-sheet-cancel>
   </action-sheet>
