@@ -47,7 +47,15 @@ Page({
           image: movieDetail.image,
           title: movieDetail.title
         })
+        wx.setStorage({
+          key: 'currentUser',
+          data: {
+            name: res.userInfo.nickName,
+            headshort: res.userInfo.avatarUrl
+          }
+        })
       }
     })
+   
   }
 })
