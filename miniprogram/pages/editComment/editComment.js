@@ -22,11 +22,11 @@ Page({
   skipToPreview() {
     if (this.data.selectTxt) { // 文字
       wx.navigateTo({
-        url: '../previewComment/previewComment?content=' + this.data.inputValue,
+        url: '../previewComment/previewComment?content=' + this.data.inputValue + '&selectTxt=' + this.data.selectTxt
       })
     } else {
       wx.navigateTo({ // 语音
-        url: '../previewComment/previewComment?voice=' + this.data.tempFilePath,
+        url: '../previewComment/previewComment?voice=' + this.data.tempFilePath + '&selectTxt=' + this.data.selectTxt
       })
     }
   },

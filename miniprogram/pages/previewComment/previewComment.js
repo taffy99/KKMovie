@@ -10,9 +10,10 @@ Page({
     headshort: '',
     name: '',
     content: '',
-    voice:'',
-    startPlay:false,
-    radioTimer:''
+    voice: '',
+    startPlay: false,
+    radioTimer: '',
+    isText: true
   },
   backToComment() {
     wx.navigateBack()
@@ -39,13 +40,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    console.log(options)
-    if(options.content){
+    console.log(options.selectTxt)
+    if (options.selectTxt == 'true') {
       this.setData({
-        isText:true,
+        isText: true,
         content: options.content
       })
-    }else if(options.voice){
+    } else {
       this.setData({
         isText: false,
         voice: options.voice
