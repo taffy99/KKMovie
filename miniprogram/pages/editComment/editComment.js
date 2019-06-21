@@ -3,7 +3,6 @@ const recorderManager = wx.getRecorderManager();
 const innerAudioContext = wx.createInnerAudioContext();
 let timer = null; // 计时器
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -14,12 +13,22 @@ Page({
     tempFilePath: '',
     selectTxt: false,
     startRecord: false,
-    recordTimer: '00:00'
+    recordTimer: '00:00',
+    radioTimer: '',
+    startPlay: false,
+    hasRadio: false
   },
+  // 跳转预览页
   skipToPreview() {
-    wx.navigateTo({
-      url: '../previewComment/previewComment?content=' + this.data.inputValue,
-    })
+    if (this.data.selectTxt) { // 文字
+      wx.navigateTo({
+        url: '../previewComment/previewComment?content=' + this.data.inputValue,
+      })
+    } else {
+      wx.navigateTo({ // 语音
+        url: '../previewComment/previewComment?voice=' + this.data.tempFilePath,
+      })
+    }
   },
   // 开始录音
   startRecord() {
@@ -52,7 +61,8 @@ Page({
       let s = parseInt(n % 60) < 10 ? '0' + parseInt(n % 60) : parseInt(n % 60);
       recordTimer = m + ':' + s;
       that.setData({
-        recordTimer: recordTimer
+        recordTimer: recordTimer,
+        radioTimer: parseInt(n % 60)
       })
     }, 1000)
   },
@@ -60,7 +70,11 @@ Page({
   stopRecord() {
     recorderManager.stop();
     recorderManager.onStop((res) => {
-      this.tempFilePath = res.tempFilePath;
+      clearInterval(timer);
+      this.setData({
+        tempFilePath: res.tempFilePath,
+        hasRadio: true
+      })
       console.log('停止录音', res.tempFilePath);
     })
     clearInterval(timer);
@@ -69,10 +83,29 @@ Page({
       recordTimer: '00:00'
     })
   },
+  startPlay() {
+    let that = this
+    this.setData({
+      startPlay: true,
+    })
+    clearInterval(timer)
+    let n = parseInt(that.data.radioTimer)
+    timer = setInterval(function() {
+      n--
+      let s = parseInt(n % 60)
+      if (n == 0) {
+        clearInterval(timer)
+        that.setData({
+          startPlay: false
+        })
+      }
+    }, 1000)
+    this.playRecord()
+  },
   // 播放录音
   playRecord() {
     innerAudioContext.autoplay = true;
-    innerAudioContext.src = this.tempFilePath;
+    innerAudioContext.src = this.data.tempFilePath;
     innerAudioContext.onPlay(() => {
       console.log('start play')
     })
@@ -84,7 +117,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    console.log(options)
     if (options.selectType && options.selectType == '文字') {
       this.setData({
         selectTxt: true

@@ -6,11 +6,11 @@
     <view class='comment-content' wx:if='{{selectTxt}}'>
       <textarea placeholder='输入你的影评内容...' class='input-area' value='{{inputValue}}' bindblur='onblur'></textarea>
     </view>
-    <view class='record-content' wx:else>
-      <view class='record-Radio'>
-        <view class='radio-content'>
-          <view class='radio-time'>40''</view>
-          <view class='radio-play voicePlay'>
+    <view class='record-content'>
+      <view class='record-Radio' bindtap='startPlay'>
+        <view class='radio-content' wx:if='{{hasRadio}}'>
+          <view class='radio-time'>{{radioTimer}}s</view>
+          <view class='radio-play' wx:if='{{startPlay}}'>
           </view>
         </view>
       </view>

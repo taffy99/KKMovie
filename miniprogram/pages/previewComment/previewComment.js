@@ -9,7 +9,10 @@ Page({
     title: '',
     headshort: '',
     name: '',
-    content: ''
+    content: '',
+    voice:'',
+    startPlay:false,
+    radioTimer:''
   },
   backToComment() {
     wx.navigateBack()
@@ -21,13 +24,13 @@ Page({
         title: this.data.title,
         headshort: this.data.headshort,
         content: this.data.content,
-        image:this.data.image
+        image: this.data.image
       },
-      success:(res)=>{
+      success: (res) => {
         console.log(res)
       },
-      fail:console.error
-    }) 
+      fail: console.error
+    })
     wx.navigateTo({
       url: '../commentList/commentList',
     })
@@ -35,15 +38,26 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
+    console.log(options)
+    if(options.content){
+      this.setData({
+        isText:true,
+        content: options.content
+      })
+    }else if(options.voice){
+      this.setData({
+        isText: false,
+        voice: options.voice
+      })
+    }
     let that = this
     let movieDetail = wx.getStorageSync('movieDetail')
     wx.getUserInfo({
-      success: function (res) {
+      success: function(res) {
         that.setData({
           headshort: res.userInfo.avatarUrl,
           name: res.userInfo.nickName,
-          content: options.content,
           image: movieDetail.image,
           title: movieDetail.title
         })
@@ -56,6 +70,6 @@ Page({
         })
       }
     })
-   
+
   }
 })
