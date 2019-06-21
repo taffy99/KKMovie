@@ -12,6 +12,7 @@
   position: relative;
   top:150rpx;
 }
+
 .movie-img{
   width: 450rpx;
   height: 750rpx;

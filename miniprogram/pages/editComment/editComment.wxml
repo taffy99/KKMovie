@@ -10,7 +10,7 @@
       <view class='record-Radio'>
         <view class='radio-content'>
           <view class='radio-time'>40''</view>
-          <view class='radio-play'>
+          <view class='radio-play voicePlay'>
           </view>
         </view>
       </view>
