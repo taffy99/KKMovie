@@ -9,7 +9,7 @@
         <view class='comment-name'>{{name}}的影评</view>
       </view>
       <view class='comment-bottom'>
-        <view wx:if="isText">
+        <view wx:if="{{isText}}">
           <view class='iconfont icon-baojiaquotation2'></view>
           <view class='content-txt'>{{content}}</view>
         </view>

@@ -26,7 +26,7 @@ Page({
       })
     } else {
       wx.navigateTo({ // 语音
-        url: '../previewComment/previewComment?voice=' + this.data.tempFilePath + '&selectTxt=' + this.data.selectTxt
+        url: '../previewComment/previewComment?voice=' + this.data.tempFilePath + '&selectTxt=' + this.data.selectTxt + '&radioTimer=' + this.data.radioTimer
       })
     }
   },

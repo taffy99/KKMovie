@@ -1,5 +1,7 @@
 // miniprogram/pages/previewComment/previewComment.js
 const db = wx.cloud.database();
+let timer = null;
+const innerAudioContext = wx.createInnerAudioContext();
 Page({
   /**
    * 页面的初始数据
@@ -15,6 +17,36 @@ Page({
     radioTimer: '',
     isText: true
   },
+  startPlay() {
+    let that = this
+    this.setData({
+      startPlay: true,
+    })
+    clearInterval(timer)
+    let n = parseInt(that.data.radioTimer)
+    timer = setInterval(function () {
+      n--
+      let s = parseInt(n % 60)
+      if (n == 0) {
+        clearInterval(timer)
+        that.setData({
+          startPlay: false
+        })
+      }
+    }, 1000)
+    this.playRecord()
+  },
+  // 播放录音
+  playRecord() {
+    innerAudioContext.autoplay = true;
+    innerAudioContext.src = this.data.voice;
+    innerAudioContext.onPlay(() => {
+      console.log('start play')
+    })
+    innerAudioContext.onError((res) => {
+      console.log(res.errMsg)
+    })
+  },
   backToComment() {
     wx.navigateBack()
   },
@@ -25,7 +57,8 @@ Page({
         title: this.data.title,
         headshort: this.data.headshort,
         content: this.data.content,
-        image: this.data.image
+        image: this.data.image,
+        voice: this.data.voice
       },
       success: (res) => {
         console.log(res)
@@ -49,7 +82,8 @@ Page({
     } else {
       this.setData({
         isText: false,
-        voice: options.voice
+        voice: options.voice,
+        radioTimer:options.radioTimer
       })
     }
     let that = this
