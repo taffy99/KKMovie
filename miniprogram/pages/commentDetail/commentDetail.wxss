@@ -13,7 +13,6 @@
   position: absolute;
   z-index: 9;
   top:25rpx;
-  
 }
 .comment-detail{
   display: flex;
@@ -25,6 +24,7 @@
   border: 1px solid #E2E7ED;
   background: #ffffff;
   margin-bottom: 40rpx;
+  width: 85%;
 }
 .comment-title{
   margin-top:300rpx;

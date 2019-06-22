@@ -7,7 +7,9 @@ Page({
   data: { 
     recommendMovie:{}, // 推荐电影
     movieTitle:'',
-    movieImg:''  
+    movieImg:'' ,
+    headshort:'',
+    name:''
     },
     
   // 跳转热门电影
@@ -24,13 +26,14 @@ Page({
   },
   // 跳转影评详情
   skipToComment() {
+    let commentId  = this.data.recommendMovie._id
     wx.navigateTo({
-      url: '../commentDetail/commentDetail',
+      url: '../commentDetail/commentDetail?commentId=' + commentId,
     })
   },
   //跳转电影详情
   skipToDetail(){
-    let movieId = this.data.recommendMovie._id
+    let movieId = this.data.recommendMovie.movieId
     wx.navigateTo({
       url: '../movieDetail/movieDetail?movieId=' + movieId,
     })
@@ -40,21 +43,23 @@ Page({
    */
   onLoad: function (options) {
     wx.cloud.callFunction({
-      name: 'movieList',
+      name: 'movieComments',
       success: res => {
         let recommendMovie = this.getRandomMovie(res.result.data);
         this.setData({
           recommendMovie,
           movieTitle: recommendMovie.title,
-          movieImg: recommendMovie.image
+          movieImg: recommendMovie.image,
+          headshort: recommendMovie.headshort,
+          name: recommendMovie.name
         })
       },
       fail:console.errorerror
     })
   },
   //获取随机电影
-  getRandomMovie(movieList){
-    let movie = movieList[Math.floor(Math.random()* movieList.length)]
+  getRandomMovie(movieComments){
+    let movie = movieComments[Math.floor(Math.random() * movieComments.length)]
     return movie
   },
   /**

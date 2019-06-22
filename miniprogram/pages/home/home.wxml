@@ -4,12 +4,12 @@
     <image class='movie-img' src="{{movieImg}}" mode="widthFix" bindtap='skipToDetail'></image>
     <view class='movie-title'>{{movieTitle}}</view>
     <view class='movie-comment' bindtap='skipToComment'>
-      <image class="head-shot" src='../../images/wxy.jpg' mode="aspectFill"></image>
-      <view class='comment-tip'>XUANYI给你推荐了一部电影</view>
+      <image class="head-shot" src='{{headshort}}' mode="aspectFill"></image>
+      <view class='comment-tip'>{{name}}给你推荐了一部电影</view>
     </view>
   </view>
   <view class='skip-buttons'>
-    <view class='btn iconfont' bindtap='skipToHot'>热门</view>
+    <view class='btn iconfont icon-remen' bindtap='skipToHot'>热门</view>
     <view class='btn iconfont icon-wode' bindtap='skipToMy'>我的</view> 
   </view>
 </view>

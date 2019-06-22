@@ -3,9 +3,19 @@
 .my-container {
   padding: 40rpx;
   background-color: #f7f9fb;
-  height: 100vh;
+  height: 100%;
+  margin-bottom: 100rpx;
 }
-
+.my_tabs{
+  display: flex;
+  padding-bottom: 25rpx;
+}
+.tab_selected{
+  color:#7F99AF;
+}
+.tab_collection{
+   margin-right: 25rpx;
+}
 .my-item {
   display: flex;
   flex-direction: row;

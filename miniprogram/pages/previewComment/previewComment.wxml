@@ -1,16 +1,25 @@
 <!--miniprogram/pages/previewComment/previewComment.wxml-->
 <view class='comment-container'>
-  <image class='comment-img' src='{{comment.image}}' mode="widthFix"></image>
+  <image class='comment-img' src='{{image}}' mode="widthFix"></image>
   <view class='comment-detail'>
-    <view class='comment-title'>{{comment.title}}</view>
+    <view class='comment-title'>{{title}}</view>
     <view class='comment-content'>
       <view class='comment-top'>
-          <image class='head-short' src='{{comment.headshort}}'></image>
-          <view class='comment-name'>{{comment.name}}的影评</view>
+        <image class='head-short' src='{{headshort}}'></image>
+        <view class='comment-name'>{{name}}的影评</view>
       </view>
       <view class='comment-bottom'>
-        <view class='iconfont icon-baojiaquotation2'></view>
-        <view class='content-txt'>{{comment.content}}</view>
+        <view wx:if="isText">
+          <view class='iconfont icon-baojiaquotation2'></view>
+          <view class='content-txt'>{{content}}</view>
+        </view>
+        <view class='record-Radio' bindtap='startPlay' wx:else>
+          <view class='radio-content'>
+            <view class='radio-time'>{{radioTimer}}s</view>
+            <view class='radio-play' wx:if='{{startPlay}}'>
+            </view>
+          </view>
+        </view>
       </view>
     </view>
     <view class='skip-buttons'>

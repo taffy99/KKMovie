@@ -2,7 +2,8 @@
 .list-container{
    background-color: #F7F9FB;
    padding-top:30rpx;
-   height: 100vh;
+   height: 100%;
+   margin-bottom: 100rpx;
 }
 .comment-item{
   padding:50rpx 80rpx;

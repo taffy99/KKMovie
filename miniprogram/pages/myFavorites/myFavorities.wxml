@@ -1,19 +1,23 @@
 <!--miniprogram/pages/myFavorites/myFavorities.wxml-->
 <view class='my-container'>
+  <view class='my_tabs' bindtap='selectTab'>
+    <view class='tab_collection {{selectNum==0? "tab_selected":""}}' data-num="0">已收藏</view>
+    <view class='tab_release {{selectNum==1? "tab_selected":""}}' data-num="1">已发布</view>
+  </view>
   <view wx:for="{{movieList}}" wx:key="{{item._id}}">
-      <view class='my-item'>
-        <view class='item-left'>
-          <image class='item-img' src="{{item.image}}" mode="widthFix"></image>
-        </view>
-        <view class='item-right'>
-          <view class='item-title'>{{item.title}}</view>
-          <view class='item-comment'>{{item.content}}</view>
-          <view class='item-person'>
-            <image class='head-short' src='{{item.headshort}}'></image>
-            <view>{{item.name}}</view>
-          </view>
+    <view class='my-item'>
+      <view class='item-left'>
+        <image class='item-img' src="{{item.image}}" mode="widthFix"></image>
+      </view>
+      <view class='item-right'>
+        <view class='item-title'>{{item.title}}</view>
+        <view class='item-comment'>{{item.content}}</view>
+        <view class='item-person'>
+          <image class='head-short' src='{{item.headshort}}'></image>
+          <view>{{item.name}}</view>
         </view>
       </view>
+    </view>
   </view>
   <view class='skip-buttons'>
     <view class='btn' bindtap='skipToHome'>回到首页</view>

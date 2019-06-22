@@ -10,15 +10,16 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  top:50rpx;
+  top:150rpx;
 }
+
 .movie-img{
   width: 450rpx;
   height: 750rpx;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1)
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1)
 }
 .movie-title, .movie-comment{
-  margin-top:20rpx;
+  margin-top:25rpx;
 }
 .movie-comment{
   display: flex;
@@ -33,7 +34,7 @@
   margin-right: 10rpx;
 }
 .comment-tip{
-  font-size: 30rpx;
+  font-size: 35rpx;
   color: #333333;
 }
 .skip-buttons{
@@ -43,6 +44,7 @@
   flex-direction: row;
   width: 100%;
   background: #F6F6F6;
+  color:#7F99AF
 }
 .skip-buttons .btn{
   flex: 1;

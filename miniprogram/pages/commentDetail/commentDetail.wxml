@@ -14,13 +14,16 @@
       </view>
     </view>
     <view class='skip-buttons'>
-      <view class='btn iconfont icon-shoucang1' bindtap='skipToComment'>收藏影评</view>
+      <view class="btn iconfont {{addToFavorite?'icon-shoucang1':'icon-shoucang'}}" bindtap='skipToComment'>
+      <text wx:if="{{addToFavorite}}">已收藏</text>
+      <text wx:else>收藏影评</text>
+      </view>
       <view class='btn iconfont icon-xieyingping' bindtap='actionSheetTap'>写影评</view>
     </view>
   </view>
   <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
     <block wx:for-items="{{actionSheetItems}}" wx:key="item">
-      <action-sheet-item bindtap="bind">{{item}}</action-sheet-item>
+      <action-sheet-item bindtap="bindItemTap" data-name="{{item}}">{{item}}</action-sheet-item>
     </block>
     <action-sheet-cancel>取消</action-sheet-cancel>
   </action-sheet>

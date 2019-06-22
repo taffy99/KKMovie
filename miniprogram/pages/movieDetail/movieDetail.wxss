@@ -30,6 +30,7 @@
   margin-top:300rpx;
 }
 .movie-des{
+  position: relative;
   margin-top: 20rpx;
   font-size:36rpx;
 }
