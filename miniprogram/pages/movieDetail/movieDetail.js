@@ -24,7 +24,8 @@ Page({
     let selectType = e.currentTarget.dataset.name
     let movieDetail = {
       image: this.data.movie.image,
-      title: this.data.movie.title
+      title: this.data.movie.title,
+      movieId: this.data.movie._id
     }
     wx.setStorageSync('movieDetail', movieDetail)
     wx.navigateTo({

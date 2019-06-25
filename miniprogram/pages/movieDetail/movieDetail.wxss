@@ -13,13 +13,10 @@
   position: absolute;
   z-index: 9;
   top:25rpx;
-  
 }
 .movie-detail{
-  display: flex;
   position: relative;
   top:100rpx;
-  flex-direction: column;
   align-items: center;
   padding:50rpx;  
   border: 1px solid #E2E7ED;
@@ -28,6 +25,7 @@
 }
 .movie-title{
   margin-top:300rpx;
+  text-align: center;
 }
 .movie-des{
   position: relative;

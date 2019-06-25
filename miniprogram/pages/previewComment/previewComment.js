@@ -15,7 +15,8 @@ Page({
     voice: '',
     startPlay: false,
     radioTimer: '',
-    isText: true
+    isText: true,
+    movieId: ''
   },
   startPlay() {
     let that = this
@@ -59,7 +60,8 @@ Page({
         content: this.data.content,
         image: this.data.image,
         voice: this.data.voice,
-        voiceTime: this.data.radioTimer
+        voiceTime: this.data.radioTimer,
+        movieId: this.data.movieId
       },
       success: (res) => {
         console.log(res)
@@ -94,7 +96,8 @@ Page({
           headshort: res.userInfo.avatarUrl,
           name: res.userInfo.nickName,
           image: movieDetail.image,
-          title: movieDetail.title
+          title: movieDetail.title,
+          movieId: movieDetail.movieId
         })
         wx.setStorage({
           key: 'currentUser',

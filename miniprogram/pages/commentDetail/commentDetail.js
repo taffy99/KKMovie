@@ -95,7 +95,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getComment('14dc756e5d11955f0075e21347c64a3b')
+    this.getComment(options.commentId)
     wx.showLoading({
       title: '',
     })
