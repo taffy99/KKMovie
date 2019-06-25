@@ -1,5 +1,7 @@
 // miniprogram/pages/commentDetail/commentDetail.js
 const db = wx.cloud.database();
+let timer = null;
+const innerAudioContext = wx.createInnerAudioContext();
 Page({
 
   /**
@@ -9,7 +11,39 @@ Page({
     comment: {},
     actionSheetHidden: true,
     actionSheetItems: ['文字', '音频'],
-    addToFavorite: false
+    addToFavorite: false,
+    startPlay:false,
+    voice:''
+  },
+  startPlay() {
+    let that = this
+    this.setData({
+      startPlay: true,
+    })
+    clearInterval(timer)
+    let n = parseInt(that.data.comment.voiceTime)
+    timer = setInterval(function () {
+      n--
+      let s = parseInt(n % 60)
+      if (n == 0) {
+        clearInterval(timer)
+        that.setData({
+          startPlay: false
+        })
+      }
+    }, 1000)
+    this.playRecord()
+  },
+  // 播放录音
+  playRecord() {
+    innerAudioContext.autoplay = true;
+    innerAudioContext.src = this.data.comment.voice;
+    innerAudioContext.onPlay(() => {
+      console.log('start play')
+    })
+    innerAudioContext.onError((res) => {
+      console.log(res.errMsg)
+    })
   },
   // 底部弹出框
   actionSheetTap() {
@@ -61,7 +95,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getComment(options.commentId)
+    this.getComment('14dc756e5d11955f0075e21347c64a3b')
     wx.showLoading({
       title: '',
     })

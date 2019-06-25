@@ -17,11 +17,15 @@ Page({
    */
   onLoad: function (options) {
     this.getCommentList()
+    wx.showLoading({
+      title: '',
+    })
   },
   getCommentList(callback){
     wx.cloud.callFunction({
       name:'movieComments'
     }).then(res=>{
+      wx.hideLoading()
       this.setData({
         commentlist:res.result.data
       })

@@ -24,7 +24,7 @@ Page({
     })
     clearInterval(timer)
     let n = parseInt(that.data.radioTimer)
-    timer = setInterval(function () {
+    timer = setInterval(function() {
       n--
       let s = parseInt(n % 60)
       if (n == 0) {
@@ -58,7 +58,8 @@ Page({
         headshort: this.data.headshort,
         content: this.data.content,
         image: this.data.image,
-        voice: this.data.voice
+        voice: this.data.voice,
+        voiceTime: this.data.radioTimer
       },
       success: (res) => {
         console.log(res)
@@ -73,7 +74,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    console.log(options.selectTxt)
     if (options.selectTxt == 'true') {
       this.setData({
         isText: true,
@@ -83,7 +83,7 @@ Page({
       this.setData({
         isText: false,
         voice: options.voice,
-        radioTimer:options.radioTimer
+        radioTimer: options.radioTimer
       })
     }
     let that = this
