@@ -1,7 +1,7 @@
 <!--miniprogram/pages/commentList/commentList.wxml-->
 <view class='list-container'>
   <view wx:for='{{commentlist}}' wx:key='{{item._id}}'>
-    <navigator url='../commentDetail/commentDetail?commentId={{item._id}}'  class='list-item'>
+    <navigator url='../commentDetail/commentDetail?commentId={{item._id}}' class='list-item'>
       <view class='comment-item'>
         <view class='item-top'>
           <image class='item-header' src='{{item.headshort}}'></image>
@@ -9,6 +9,13 @@
         </view>
         <view class='item-bottom'>
           <view class='item-content' wx:if="{{item.content!=''}}">{{item.content}}</view>
+          <view class='record-Radio' catchtap='startPlay' wx:else>
+            <view class='radio-content' data-item='{{item}}'>
+              <view class='radio-time'>{{item.voiceTime}}s</view>
+              <view class='radio-play' wx:if='{{startPlay}}'>
+              </view>
+            </view>
+          </view>
         </view>
       </view>
     </navigator>
