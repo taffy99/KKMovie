@@ -1,0 +1,51 @@
+/* miniprogram/pages/recommendMV/recommendList.wxss */
+
+.recommend-list {
+  position: relative;
+  height: 450rpx;
+  width: 100%;
+}
+
+.recommend-item {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translate3d(-50%, 0, 0);
+  transform: translate3d(-50%, 0, 0);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  width: 222px;
+  height: 300px;
+  /*border: 1px solid #ccc;*/
+  text-align: center;
+  line-height: 300px;
+  z-index: 1;
+  font-size: 74px;
+  color: #fff;
+}
+
+.item_cur {
+  z-index: 3;
+}
+
+.item_0 {
+  -webkit-transform: translate3d(-104%, 12%, 0) scale3d(0.5, 0.5, 1);
+  transform: translate3d(-104%, 12%, 0) scale3d(0.5, 0.5, 1);
+}
+
+.item_1 {
+  -webkit-transform: translate3d(-81%, 9%, 0) scale3d(0.7, 0.7, 1);
+  transform: translate3d(-81%, 9%, 0) scale3d(0.7, 0.7, 1);
+  z-index: 2;
+}
+
+.item_3 {
+  -webkit-transform: translate3d(-20%, 9%, 0) scale3d(0.7, 0.7, 1);
+  transform: translate3d(-20%, 9%, 0) scale3d(0.7, 0.7, 1);
+  z-index: 2;
+}
+
+.item_4 {
+  -webkit-transform: translate3d(4%, 12%, 0) scale3d(0.5, 0.5, 1);
+  transform: translate3d(4%, 12%, 0) scale3d(0.5, 0.5, 1);
+}

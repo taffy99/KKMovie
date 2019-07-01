@@ -8,7 +8,8 @@
     "pages/commentList/commentList",
     "pages/editComment/editComment",
     "pages/previewComment/previewComment",
-    "pages/myFavorites/myFavorities"
+    "pages/myFavorites/myFavorities",
+    "pages/recommendMV/recommendList"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

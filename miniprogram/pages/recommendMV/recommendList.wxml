@@ -1,0 +1,8 @@
+<!--miniprogram/pages/recommendMV/recommendList.wxml-->
+<view class='recommend-wapper'>
+  <view class='recommend-list'>
+      <view class='recommend-item' wx:for="{{recommendList}}" wx:key="{{item}}">
+        <image class='item-image' src='{{item.image}}'></image>
+      </view>
+  </view>
+</view>

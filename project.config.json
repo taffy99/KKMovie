@@ -31,7 +31,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -92,6 +92,13 @@
 					"id": -1,
 					"name": "我的",
 					"pathName": "pages/myFavorites/myFavorities",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "电影推荐（3D展示）",
+					"pathName": "pages/recommendMV/recommendList",
 					"query": "",
 					"scene": null
 				}
