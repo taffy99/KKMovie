@@ -6,6 +6,9 @@
   height: 100%;
   margin-bottom: 100rpx;
 }
+.login-content{
+  height: 100vh;
+}
 .my_tabs{
   display: flex;
   padding-bottom: 25rpx;
@@ -71,4 +74,33 @@
   height: 100rpx;
   color:#7F99AF;
   line-height: 100rpx;
+}
+.login-card{
+  padding:25rpx;
+  display: flex;
+  align-items: center;
+  height: 200rpx;
+  width: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  margin-bottom: 60rpx;
+}
+.login-head{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #7F99AF;
+  opacity: 0.8;
+  margin-right: 25rpx;
+}
+.login-tips{
+  color:#999;
+  font-size:30rpx;
+}
+.login-btn{
+  width:350rpx;
+  background-color: #7F99AF;
+  opacity: 0.6;
+  color:#fff;
 }

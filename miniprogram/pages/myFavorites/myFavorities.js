@@ -7,7 +7,8 @@ Page({
    */
   data: {
     movieList: [],
-    selectNum: '0' // tab选中值
+    selectNum: '0', // tab选中值
+    userInfo:null
   },
   // tab切换
   selectTab(e) {
@@ -38,6 +39,9 @@ Page({
     wx.redirectTo({
       url: '../home/home'
     })
+  },
+  onTapLogin(event){
+    console.log(event)
   },
   /**
    * 生命周期函数--监听页面加载
