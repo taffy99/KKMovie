@@ -8,7 +8,7 @@ Page({
   data: {
     movieList: [],
     selectNum: '0', // tab选中值
-    userInfo:null
+    userInfo: null
   },
   // tab切换
   selectTab(e) {
@@ -40,8 +40,10 @@ Page({
       url: '../home/home'
     })
   },
-  onTapLogin(event){
-    console.log(event)
+  onTapLogin(event) {
+    this.setData({
+      userInfo: event.detail.userInfo
+    })
   },
   /**
    * 生命周期函数--监听页面加载

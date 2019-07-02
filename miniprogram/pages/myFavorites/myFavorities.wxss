@@ -8,6 +8,7 @@
 }
 .login-content{
   height: 100vh;
+  overflow: hidden;
 }
 .my_tabs{
   display: flex;
