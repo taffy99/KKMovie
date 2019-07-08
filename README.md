@@ -11,3 +11,4 @@
 - 存放路径：database 文件夹下，打开小程序云开发—数据库导入即可
 
 ## 功能展示
+![Aaron Swartz](https://raw.githubusercontent.com/taffy99/KKMovie/master/QRCode/code.jpg)
