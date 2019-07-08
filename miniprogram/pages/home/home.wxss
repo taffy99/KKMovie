@@ -1,19 +1,20 @@
 /* miniprogram/pages/home/home.wxss */
 .home-container{
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
 }
 .movie-detail{
+  position: relative;
+  height: 100%;
+  padding-top:15%;
+  box-sizing: border-box;
+}
+.movie-item{
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  top:150rpx;
 }
-
 .movie-img{
   width: 450rpx;
   height: 750rpx;

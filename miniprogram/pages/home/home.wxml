@@ -1,15 +1,19 @@
 <!--miniprogram/pages/home/home.wxml-->
 <view class='home-container'>
-  <view class='movie-detail'> 
-    <image class='movie-img' src="{{movieImg}}" mode="widthFix" bindtap='skipToDetail'></image>
-    <view class='movie-title'>{{movieTitle}}</view>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" class='movie-detail'>
+      <block wx:for="{{recommendList}}">
+        <swiper-item class="movie-item">
+          <image class='movie-img' src="{{item.image}}" mode="widthFix" bindtap='skipToDetail'></image>
+          <view class='movie-title'>{{item.title}}</view>
+        </swiper-item>
+      </block>
+    </swiper>
     <!-- <view class='movie-comment' bindtap='skipToComment'>
       <image class="head-shot" src='{{headshort}}' mode="aspectFill"></image>
       <view class='comment-tip'>{{name}}给你推荐了一部电影</view>
     </view> -->
-  </view>
   <view class='skip-buttons'>
     <view class='btn iconfont icon-remen' bindtap='skipToHot'>热门</view>
-    <view class='btn iconfont icon-wode' bindtap='skipToMy'>我的</view> 
+    <view class='btn iconfont icon-wode' bindtap='skipToMy'>我的</view>
   </view>
 </view>
