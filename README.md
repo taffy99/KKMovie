@@ -11,5 +11,5 @@
 - 存放路径：database 文件夹下，打开小程序云开发—数据库导入即可
 
 ## 功能展示
-- 高分电影推荐页：使用小程序 swiper组件实现图片滚动播放功能
+- 高分电影推荐页：使用小程序 swiper组件实现图片滚动播放功能（<br>）
 ![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/gfmovie.gif)
