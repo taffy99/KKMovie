@@ -11,6 +11,10 @@
 - 存放路径：database 文件夹下，打开小程序云开发—数据库导入即可
 
 ## 功能展示
-- 高分电影推荐页：使用[微信小程序swiper组件](https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html)实现图片滚动播放功能<br><br>
-
-![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/gfmovie.gif)
+- 高分电影推荐：使用[微信小程序swiper组件](https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html)实现图片滚动播放功能<br>
+![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/gfenMv.gif)
+- 热门电影列表
+- 我的
+- 电影详情
+- 评论添加（文字、语音）
+- 评论列表
