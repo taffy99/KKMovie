@@ -3,8 +3,10 @@
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" class='movie-detail'>
       <block wx:for="{{recommendList}}">
         <swiper-item class="movie-item">
-          <image class='movie-img' src="{{item.image}}" mode="widthFix" bindtap='skipToDetail'></image>
+          <view class='movie-bg'>
+            <image class='movie-img' src="{{item.image}}" mode="widthFix" bindtap='skipToDetail'></image>
           <view class='movie-title'>{{item.title}}</view>
+          </view>
         </swiper-item>
       </block>
     </swiper>
