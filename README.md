@@ -13,9 +13,9 @@
 ## 功能展示
 - 高分电影推荐：使用[微信小程序swiper组件](https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html)实现图片滚动播放功能<br>
 ![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/gfenMv.gif)
-- 热门电影列表
+- 热门电影列表<br>
 ![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/hotMv.gif)
-- 我的
+- 我的<br>
 ![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/wode.gif)
 - 电影详情
 - 评论添加（文字、语音）
