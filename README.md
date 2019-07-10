@@ -11,4 +11,6 @@
 - 存放路径：database 文件夹下，打开小程序云开发—数据库导入即可
 
 ## 功能展示
-![Aaron Swartz](https://raw.githubusercontent.com/taffy99/KKMovie/master/QRCode/code.jpg)
+- 高分电影推荐页：使用[微信小程序swiper组件](https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html)实现图片滚动播放功能<br><br>
+
+![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/gfmovie.gif)
