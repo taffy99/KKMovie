@@ -13,9 +13,9 @@
 ## 功能展示
 - 高分电影推荐：使用[微信小程序swiper组件](https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html)实现图片滚动播放功能<br>
 ![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/gfenMv.gif)
-- 热门电影列表:使用[列表渲染](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/list.html)[下拉刷新](https://developers.weixin.qq.com/miniprogram/dev/api/ui/pull-down-refresh/wx.stopPullDownRefresh.html)进行列表展示<br>
+- 热门电影列表:使用[列表渲染](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/list.html)&[下拉刷新](https://developers.weixin.qq.com/miniprogram/dev/api/ui/pull-down-refresh/wx.stopPullDownRefresh.html)功能进行列表展示<br>
 ![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/hotMV.gif)
-- 我的：[微信授权登陆](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html)<br>
+- 我的：[微信授权登陆](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html)获取用户信息<br>
 ![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/wode.gif)
 - 电影详情
 - 评论添加（文字、语音）
