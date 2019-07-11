@@ -18,5 +18,7 @@
 - 我的：[微信授权登陆](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html)获取用户信息<br>
 ![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/wode.gif)
 - 电影详情
+![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/mvdetail1.png)
+![image](https://github.com/taffy99/KKMovie/blob/master/miniprogram/images/mvdetail2.png)
 - 评论添加（文字、语音）
 - 评论列表
